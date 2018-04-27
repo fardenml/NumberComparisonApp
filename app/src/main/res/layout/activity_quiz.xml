@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.clarkson.ee408.numcompare.QuizActivity">
+
+    <Button
+        android:id="@+id/Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="BackHome"
+        android:text="Back To Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans" />
+
+    <TextView
+        android:id="@+id/Header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="Answer the 3 questions and hit submit."
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Number1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="24dp"
+        android:background="#65da80"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header" />
+
+    <TextView
+        android:id="@+id/Number2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginTop="24dp"
+        android:background="#65da80"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/Number2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Number1"
+        app:layout_constraintTop_toBottomOf="@+id/Header">
+
+        <RadioButton
+            android:id="@+id/radioEqual1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="="
+            app:layout_constraintEnd_toStartOf="@+id/Number2"
+            app:layout_constraintStart_toEndOf="@+id/Number1"
+            app:layout_constraintTop_toBottomOf="@+id/Header" />
+
+        <RadioButton
+            android:id="@+id/radioGreater1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="&gt;"
+            app:layout_constraintEnd_toStartOf="@+id/Number2"
+            app:layout_constraintStart_toEndOf="@+id/Number1"
+            app:layout_constraintTop_toBottomOf="@+id/radioEqual1" />
+
+        <RadioButton
+            android:id="@+id/radioLess1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="&lt;"
+            app:layout_constraintEnd_toStartOf="@+id/Number2"
+            app:layout_constraintStart_toEndOf="@+id/Number1"
+            app:layout_constraintTop_toBottomOf="@+id/radioGreater1" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Number3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="50dp"
+        android:background="#65da80"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Number1" />
+
+    <TextView
+        android:id="@+id/Number4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginTop="50dp"
+        android:background="#65da80"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Number2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/Number4"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toEndOf="@+id/Number3"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup1">
+
+        <RadioButton
+            android:id="@+id/radioEqual2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="="
+            app:layout_constraintEnd_toStartOf="@+id/Number4"
+            app:layout_constraintStart_toEndOf="@+id/Number3"
+            app:layout_constraintTop_toBottomOf="@+id/radioLess1" />
+
+        <RadioButton
+            android:id="@+id/radioGreater2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="&gt;"
+            app:layout_constraintEnd_toStartOf="@+id/Number4"
+            app:layout_constraintStart_toEndOf="@+id/Number3"
+            app:layout_constraintTop_toBottomOf="@+id/radioEqual2" />
+
+        <RadioButton
+            android:id="@+id/radioLess2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="&lt;"
+            app:layout_constraintEnd_toStartOf="@+id/Number4"
+            app:layout_constraintStart_toEndOf="@+id/Number3"
+            app:layout_constraintTop_toBottomOf="@+id/radioGreater2" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Number5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="48dp"
+        android:background="#65da80"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Number3" />
+
+    <TextView
+        android:id="@+id/Number6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginTop="48dp"
+        android:background="#65da80"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Number4" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/Number6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Number5"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
+
+        <RadioButton
+            android:id="@+id/radioEqual3"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="="
+            app:layout_constraintEnd_toStartOf="@+id/Number6"
+            app:layout_constraintStart_toEndOf="@+id/Number5"
+            app:layout_constraintTop_toBottomOf="@+id/radioLess2" />
+
+        <RadioButton
+            android:id="@+id/radioGreater3"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="&gt;"
+            app:layout_constraintEnd_toStartOf="@+id/Number6"
+            app:layout_constraintStart_toEndOf="@+id/Number5"
+            app:layout_constraintTop_toBottomOf="@+id/radioEqual3" />
+
+        <RadioButton
+            android:id="@+id/radioLess3"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="&lt;"
+            app:layout_constraintEnd_toStartOf="@+id/Number6"
+            app:layout_constraintStart_toEndOf="@+id/Number5"
+            app:layout_constraintTop_toBottomOf="@+id/radioGreater3" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+    <TextView
+        android:id="@+id/ans"
+        android:layout_width="191dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="#65da80"
+        android:gravity="center_vertical"
+        android:text=" "
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Submit" />
+
+
+</android.support.constraint.ConstraintLayout>
